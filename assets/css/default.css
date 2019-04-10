@@ -1,23 +1,15 @@
-@font-face {
-    font-family: 'ApexBook';
-    src: url('/assets/fonts/apexnew-book-webfont.eot');
-    src: url('/assets/fonts/apexnew-book-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/apexnew-book-webfont.woff') format('woff'),
-         url('/assets/fonts/apexnew-book-webfont.ttf') format('truetype'),
-         url('/assets/fonts/apexnew-book-webfont.svg#ApexNewBook') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&subset=korean');
 
 pre {
   background-color:none;
   padding:0px;
+  width: 70%;
+  margin: auto;
 }
 
 
-h1,h2,h3,h4,h5 {
-  font-family: "ApexBook"
+h1,h2,h3,h4,h5, article {
+  font-family: 'Nanum Gothic';
 }
 a { 
 color:#4078c0;
@@ -72,8 +64,8 @@ ul.menu li:hover {
   transition:all 0.1s ease;
 }
 .logo img {
-  width:150px; 
-  height:150px;
+  max-width:100%; 
+  max-height:100%;
   padding:5px;
   border-radius: 6px;
 }
@@ -101,12 +93,13 @@ ul.menu li:hover {
   padding: 0 20px 10px;
 }
 .summary header a {
-  font-size:18px;
+  font-size: 32px;
 }
 .summary .description p{
   font-size:15px;
   color:#767676;
   font-weight:300;
+  text-indent: 1em;
 }
 i.read-more{
   font-size:10px;
@@ -124,9 +117,10 @@ a.read-more{
   font-size:12px;
   margin-bottom:15px;
   font-style: italic;
+  text-align: right;
 }
 .footer-icon {
-  color:#8CC665; 
+  color:red; 
   font-size:10px; 
   padding:10px
 }
@@ -136,17 +130,76 @@ a.read-more{
   line-height:5;
 }
 
-article.post img {
- width:100%;   
- margin-top:10px;
- margin-bottom:10px;
+.kg-card {  
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kg-card.kg-embed-card {
+  width: 70%
+}
+
+.kg-embed-card iframe {
+  margin: auto;
+  display: block;
+}
+.kg-image-card {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kg-image-card.kg-width-full{
+  width: 100%;  
+}
+
+.kg-image-card.kg-width-wide {
+  width: 70%;  
+}
+
+.kg-image {
+  width: 100%;
 }
 
 article.post:first-child h2.title {
   margin-top: 0;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 992px) {  
+  pre {
+    width: 100%;
+  }
+  
+  .kg-card.kg-embed-card {
+    width: 100%;
+    overflow: auto;  
+  }
+  
+  .kg-embed-card iframe {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width:480px;
+  }
+
+  .kg-image-card {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .kg-image-card.kg-width-full{
+    width: 100%;  
+  }
+  
+  .kg-image-card.kg-width-wide {
+    width: 100%;  
+  }
+}
+
+@media (min-width: 992px) {
   .blog-description h1 {
     color: white;
   }
