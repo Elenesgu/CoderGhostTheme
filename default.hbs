@@ -35,10 +35,8 @@
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-40547934-3', 'auto');
   ga('send', 'pageview');
-
 </script>
         <script type="text/javascript" src="{{asset "js/jquery.js"}}"></script>
 
@@ -51,7 +49,6 @@
   {{{block "initHighlight"}}}
 
 <script>
-
 </script>
 </head>
 <body>
@@ -87,12 +84,10 @@
     <footer class="page-footer">
       <div class="container">
         <div class="row">
-          <div class="col-xs-6">
-          <i class="el el-stop footer-icon"></i>
-            &copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a> All rights reserved.<br><br>
-            Coder Ghost Theme created by <a href="https://www.mbejda.com">Milos Bejda</a>
+          <div class="col-xs-12">
+          <i class="el el-heart footer-icon"></i>
+            &copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a> All rights reserved.
           </div>
-          <div class="col-xs-6 text-right hidden-sm hidden-xs">Proudly published with <a href="https://ghost.org">Ghost</a></div>
         </div>
       </div>
     </footer>
