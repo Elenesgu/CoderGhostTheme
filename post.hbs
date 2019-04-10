@@ -3,7 +3,7 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
-<a href="{{@blog.url}}" class="read-more"><i class="el el-caret-left read-more"></i> home</a>
+<a href="{{@site.url}}" class="back-home"><i class="el el-th-list"></i> Home</a>
 <hr>
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
@@ -20,11 +20,12 @@
     <article class="row {{post_class}}">
 
         <header class="col-xs-12">
-        <div class="col-md-10 no-margin no-padding post">
+        <div class="no-margin no-padding post">
             <h1 class="title">
             {{title}}
 
             </h1>
+            <div class="subhead"> Posted on <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD일, YYYY"}}</time>; tags:{{tags prefix="<span class='fa fa-tags'></span>&nbsp;"}}</div>
              </div>
 <div class="col-md-2">
 {{#if feature_image}}

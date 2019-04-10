@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     {{! Page Meta }}
     <title>
-    {{meta_title}}{{#is "post"}} | {{@blog.title}}{{/is}}
+    {{meta_title}}{{#is "post"}} | {{@site.title}}{{/is}}
     </title>
 
     {{! Page Meta }}
@@ -39,6 +39,7 @@
   ga('send', 'pageview');
 </script>
         <script type="text/javascript" src="{{asset "js/jquery.js"}}"></script>
+        <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
 
     {{! Add all code style here }}
     <!--<link rel="stylesheet" href="{{asset "css/default.css"}}">-->
@@ -52,15 +53,9 @@
 </script>
 </head>
 <body>
-{{#is "home"}}
-    {{#if @blog.cover_image}}
-        <div style="background:url({{@blog.cover_image}}) no-repeat center center;" class="cover cover-border hidden-sm hidden-xs">
-            <div class="blog-description">
-                <h1>{{@blog.description}}</h1>
-            </div>
-        </div>
-    {{/if}}
-{{/is}}
+    <div style="background:url(/content/images/cover.jpg) no-repeat center center;" class="cover cover-border">
+
+    </div>
 <div class="container">
 <div class="row">
 <div class="col-md-2 hidden-sm hidden-xs">
@@ -83,12 +78,8 @@
 
     <footer class="page-footer">
       <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
           <i class="el el-heart footer-icon"></i>
-            &copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a> All rights reserved.
-          </div>
-        </div>
+            &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> All rights reserved.
       </div>
     </footer>
 
@@ -99,7 +90,7 @@
 
     {{! The main JavaScript file for Casper }}
     <script src="{{asset "js/modernizr.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script type="module" src="{{asset "js/index.js"}}"></script>
 
 </body>
 </html>

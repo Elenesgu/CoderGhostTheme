@@ -10,14 +10,13 @@
         </h2>
 
     </header>
-           <div class="subhead"> Posted on <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix="<span class='fa fa-tags'></span>&nbsp;"}}</div>
+           <div class="subhead"> Posted on <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD일, YYYY"}}</time>; tags:{{tags prefix="<span class='fa fa-tags'></span>&nbsp;"}}</div>
 
     <section class="description">
-        <p>{{excerpt words="30"}} 
-
-<a class="read-more" href="{{url}}"><i class="el el-caret-right read-more"></i></a>
-        </p>
-    
+        <a class="read-more" href="{{url}}">
+            <p>{{excerpt words="30"}} (read more)
+            </p>
+        </a>    
     </section>
 </article>
 {{/foreach}}
