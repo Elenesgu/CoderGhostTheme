@@ -8,7 +8,7 @@ Open sourcing the Coder Ghost theme. The coder ghost theme was built to show cas
 - stunning typography
 - thumbnail per post
 - seo optimized titles
-- works with Ghost Engine ^1.0
+- works with Ghost api v2
 
 
 ## Installation 
