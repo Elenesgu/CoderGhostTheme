@@ -3,7 +3,9 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
-<a href="{{@site.url}}" class="back-home"><i class="el el-th-list"></i> Home</a>
+<div class="back-home">
+    <a href="{{@site.url}}" class="back-home"><i class="el el-th-list"></i> Home</a>
+</div>
 <hr>
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
@@ -17,32 +19,40 @@
 
 <main  role="main">
 
-    <article class="row {{post_class}}">
+    <article class="row justify-content-center {{post_class}}">
 
-        <header class="col-xs-12">
+        <header class="col-lg-10 col-12">
         <div class="no-margin no-padding post">
             <h1 class="title">
             {{title}}
 
             </h1>
-            <div class="subhead"> Posted on <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD일, YYYY"}}</time>; tags:{{tags prefix="<span class='fa fa-tags'></span>&nbsp;"}}</div>
+            <div class="subhead"> Posted on <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD일, YYYY"}}</time> {{#if tags}}<br> tags:{{tags prefix="<span class='fa fa-tags'></span>&nbsp;"}} {{/if}}</div>
              </div>
 <div class="col-md-2">
-{{#if feature_image}}
+        {{#if feature_image}}
             <img src="{{feature_image}}" class="post-image"/>
-            {{/if}}
+        {{/if}}
             </div>
 
         </header>
-
-        <section class="col-xs-12">
+        <hr class="col-10">
+        <section class="col-lg-11 col-12">
             {{content}}
         </section>
 
-        <footer class="col-xs-12 author">
+        <footer class="col-12 author">
             
             <hr>
-
+  {{#if authors}}
+    <ul>
+    {{#foreach authors}}
+      <li>
+        <a href="{{url}}" title="{{name}}" class="author author-{{id}} {{slug}}">{{name}}</a>
+      </li>
+    {{/foreach}}
+    </ul>
+  {{/if}}
       
         </footer>
 

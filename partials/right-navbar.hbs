@@ -11,27 +11,4 @@
 <h5 class = "d-md-none d-sm-none d-none d-lg-block">{{@site.title}}</h5>
 <hr>
 
-<ul class="list-unstyled menu">
-    <li>
-        <a href="https://github.com/mbejda" target="_blank">
-         <i class="el el-github"></i> GitHub
-        </a>
-    </li>
-
-    {{#if @site.facebook}}
-        <li>
-            <a href="{{facebook_url}}" target="_blank">
-                <i class="el el-facebook"></i> {{@site.facebook}}
-            </a>
-        </li>
-    {{/if}}
-
-    {{#if @site.twitter}}
-        <li>
-            <a href="{{twitter_url}}" target="_blank">
-                <i class="el el-twitter"></i> {{@site.twitter}}
-            </a>
-        </li>
-    {{/if}}
-</ul>
-
+{{navigation}}

@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{{asset "css/bootstrap.min.css"}}"/>
     <link rel="stylesheet" href="{{asset "css/monokai_sublime.css"}}">
     <link rel="stylesheet" href="{{asset "css/default.css"}}">
-<link rel="stylesheet" href="{{asset "css/elusive-icons.min.css"}}">
+    <link rel="stylesheet" href="{{asset "css/elusive-icons.min.css"}}">
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
@@ -41,9 +41,7 @@
         <script type="text/javascript" src="{{asset "js/jquery.js"}}"></script>
         <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
 
-    {{! Add all code style here }}
-    <!--<link rel="stylesheet" href="{{asset "css/default.css"}}">-->
-    
+    {{! Add all code style here }}    
     <script src="{{asset "js/highlight.pack.js"}}"></script>
   
   {{! Page Highlight }}
@@ -54,27 +52,29 @@
 </head>
 <body>
     <div style="background:url(/content/images/cover.jpg) no-repeat center center;" class="cover cover-border">
-
     </div>
-<div class="container">
-<div class="row">
-<div class="col-md-2 hidden-sm hidden-xs">
-{{> "navbar"}}
-</div>
-<div class="col-md-10 col-xs-12">
-    {{{body}}}
-</div>
-    {{#if @labs.subscribers}}
-        <div class="col-md-10 hidden-xs hidden-sm">
-            <div class="subscribe-form">
-                {{subscribe_form}}
+    <div class="row main-container">
+        <div class="col-lg-3 col-md-3 d-sm-none d-none d-md-block">
+            {{> "left-navbar"}}
+        </div>
+        <div class="col-lg-6 col-md-9 col-12 container">
+            <div class="row">                
+                <div class="col-12 main-col">
+                    {{{body}}}
+                </div>
+                {{#if @labs.subscribers}}
+                <div class="col-md-10 d-sm-none d-none d-md-block main-col">
+                    <div class="subscribe-form">
+                        {{subscribe_form}}
+                    </div>
+                </div>
+                {{/if}}
             </div>
         </div>
-
-    {{/if}}
-
-</div>
-</div>
+        <div class="col-lg-3 d-md-none d-sm-none d-none d-lg-block">
+            {{> "right-navbar"}}
+        </div>
+    </div>
 
     <footer class="page-footer">
       <div class="container">

@@ -1,6 +1,10 @@
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
-<article class="summary col-md-12 {{post_class}}">
+    {{#if @first}}
+    {{else}}
+    <hr class="col-md-12">
+    {{/if}}
+    <article class="summary col-md-12 {{post_class}}">
     <header>
         <h2 class="title">
         <a href="{{url}}">{{{title}}}
@@ -23,7 +27,7 @@
 
 {{! Previous/next page links - displayed on every page }}
 <div class="row text-center">
-    <div class="col-xs-12">
+    <div class="col-12">
         {{pagination}}
     </div>
 </div>
