@@ -51,13 +51,18 @@
 </script>
 </head>
 <body>
+    <div class="topbar d-xl-none">
+        <div class="topbar-nav">
+            foo
+        </div>
+    </div>
     <div style="background:url(/content/images/cover.jpg) no-repeat center center;" class="cover cover-border">
     </div>
     <div class="row main-container">
-        <div class="col-lg-3 col-md-3 d-sm-none d-none d-md-block">
+        <div class="col-xl-3 col-md-3 d-sm-none d-none d-md-block">
             {{> "left-navbar"}}
         </div>
-        <div class="col-lg-6 col-md-9 col-12 container">
+        <div class="col-xl-6 col-md-9 col-12 container main-col">
             <div class="row">                
                 <div class="col-12 main-col">
                     {{{body}}}
@@ -71,7 +76,7 @@
                 {{/if}}
             </div>
         </div>
-        <div class="col-lg-3 d-md-none d-sm-none d-none d-lg-block">
+        <div class="col-xl-3 d-lg-none d-md-none d-sm-none d-none d-xl-block right-col">
             {{> "right-navbar"}}
         </div>
     </div>

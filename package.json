@@ -2,7 +2,7 @@
   "name": "coder-ghost-theme",
   "version": "2.0.2",
   "engines": {
-    "ghost": "^1.0.0"
+    "ghost-api": "^v2"
   },
   "gpm": {
     "type": "theme",
