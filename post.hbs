@@ -3,10 +3,6 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
-<div class="back-home">
-    <a href="{{@site.url}}" class="back-home"><i class="el el-th-list"></i> Home</a>
-</div>
-<hr>
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
@@ -28,15 +24,11 @@
 
             </h1>
             <div class="subhead"> Posted on <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD일, YYYY"}}</time> {{#if tags}}<br> tags:{{tags prefix="<span class='fa fa-tags'></span>&nbsp;"}} {{/if}}</div>
-             </div>
-<div class="col-md-2">
-        {{#if feature_image}}
-            <img src="{{feature_image}}" class="post-image"/>
-        {{/if}}
-            </div>
+            <hr>
+        </div>
+        
 
         </header>
-        <hr class="col-10">
         <section class="col-lg-11 col-12">
             {{content}}
         </section>

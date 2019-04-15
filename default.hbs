@@ -52,17 +52,29 @@
 </head>
 <body>
     <div class="topbar d-xl-none">
-        <div class="topbar-nav">
-            foo
+        <div class="topbar-nav row">
+            <div class="col">
+                <i class="el el-home"></i>
+            </div>
+            <div class="col">
+                <i class="el el-home"></i>
+            </div>
+            <div class="col">
+                <i class="el el-home"></i>
+            </div>
+            <div class="col">
+                <i class="el el-home"></i>
+
+            </div>            
         </div>
     </div>
     <div style="background:url(/content/images/cover.jpg) no-repeat center center;" class="cover cover-border">
     </div>
     <div class="row main-container">
-        <div class="col-xl-3 col-md-3 d-sm-none d-none d-md-block">
+        <div class="col-xl-3 col-md-3 d-sm-none d-none d-md-block left-col">
             {{> "left-navbar"}}
         </div>
-        <div class="col-xl-6 col-md-9 col-12 container main-col">
+        <div class="col-xl-7 col-md-9 col-12 container main-col">
             <div class="row">                
                 <div class="col-12 main-col">
                     {{{body}}}
@@ -76,7 +88,7 @@
                 {{/if}}
             </div>
         </div>
-        <div class="col-xl-3 d-lg-none d-md-none d-sm-none d-none d-xl-block right-col">
+        <div class="col-xl-2 d-lg-none d-md-none d-sm-none d-none d-xl-block">
             {{> "right-navbar"}}
         </div>
     </div>

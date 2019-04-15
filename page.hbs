@@ -1,10 +1,5 @@
 {{!< default}}
 
-<div class="back-home">
-    <a href="{{@site.url}}" class="back-home"><i class="el el-th-list"></i> Home</a>
-</div>
-<hr>
-
 {{#contentFor "initHighlight"}}
     <script>hljs.initHighlightingOnLoad();</script>
 {{/contentFor}}
@@ -16,12 +11,19 @@
     <article class="{{post_class}}">
     {{#post}}
 
-        <h1 class="title">{{title}}</h1>
+        <header class="col-lg-10 col-12">
+        <div class="no-margin no-padding post">
+            <h1 class="title">
+            {{title}}
+            </h1>
+            <hr>
+        </div>
+        
 
-        <section>
+        </header>
+        <section class="col-lg-11 col-12">
             {{content}}
         </section>
-
     {{/post}}
     </article>
 

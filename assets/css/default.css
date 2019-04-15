@@ -11,13 +11,13 @@ body {
   right: 0;
   left: 0;
   z-index: 1000;
-  height: 46px;
+  height: 61px;
   background-color: white;
   border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .topbar-nav {
-  height: 45px;
+  height: 60px;
   border-bottom: 1px solid rgba(0,0,0,0.25);
 }
 
@@ -63,9 +63,10 @@ article header {
   background-color: white;
 }
 
-.right-col {
-  padding-left: 40px;
+.left-col {
+  min-width: 140px;
 }
+
 
 a { 
 color:#4078c0;
@@ -120,8 +121,27 @@ ul.menu li a{
   font-weight:300;
 }
 
+/*
 .sns-menu {
-  margin-left: 50%;
+
+}
+*/
+
+.nav-div {
+  background-color: white;
+  padding: 10px 10px 10px 10px;
+}
+
+
+.right-nav-div {
+  margin: 0px 15px 0px 15px;
+  min-width: 200px;
+}
+
+.left-nav-div {
+  max-width: 220px;
+  margin-right: 0;
+  margin-left: auto;
 }
 
 .logo {
@@ -132,14 +152,15 @@ ul.menu li a{
   max-height:100%;
   padding:5px;
   border-radius: 6px;
-  width: 50%;
+  width: 100%;
 }
-
+/*
 .left-navbar-hr {
   margin-left: auto;
   margin-right: 0;
   width: 50%;
 }
+*/
 
 .nav {
   flex-direction: column;
@@ -155,6 +176,7 @@ ul.menu li a{
   height:800px;
 }
 .cover {
+  margin-top: 60px;
   background-size:cover !important;
   display: flex;
   align-items: center;
@@ -216,6 +238,8 @@ i.read-more{
 
 .page-footer{
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .back-home {
