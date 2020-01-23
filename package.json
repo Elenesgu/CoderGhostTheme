@@ -2,7 +2,7 @@
   "name": "coder-ghost-theme",
   "version": "2.0.2",
   "engines": {
-    "ghost-api": "^v2"
+    "ghost-api": "^v3"
   },
   "gpm": {
     "type": "theme",
@@ -20,9 +20,10 @@
   "license":"MIT",
   "author": {
     "name": "Code Ghost Theme",
-    "email": "mbejda@live.com",
-    "url": "https://mbejda.com"
+    "email": "elenesgu@gmail.com",
+    "url": "https://elenesgu.dev"
   },
-  "demo":"https://mbejda.com",
-  "homepage":"https://github.com/mbejda/CoderGhostTheme"
+  "keywords": ["ghost-theme"],
+  "demo":"https://elenesgu.dev",
+  "homepage":"https://github.com/elenesgu/CoderGhostTheme"
 }
