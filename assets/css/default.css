@@ -176,7 +176,6 @@ ul.menu li a{
   height:800px;
 }
 .cover {
-  margin-top: 60px;
   background-size:cover !important;
   display: flex;
   align-items: center;
@@ -400,12 +399,22 @@ pre {
 }
 
 @media (min-width: 576px) {
+  
 }
 
-@media (max-width: 768px - 1px) {
+@media (max-width: 768px) {
   pre {
     width: 100%;
   }
+
+  article header .title {
+    text-align: initial;
+  }
+
+  .cover {
+    margin-top: 60px;
+  }
+
   .cover-border {
     height: 200px;
   }
@@ -434,16 +443,14 @@ pre {
   
   .kg-image-card.kg-width-wide {
     width: 100%;  
+  }  
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  article header .title {
+    font-size: 26px;
+    text-align: center;    
   }
-}
-
-@media (max-width: 992px) {
-
-
-}
-
-@media (min-width: 992px) {
-
 }
 
 @media (min-width: 1200px) {
@@ -482,11 +489,5 @@ pre {
   }
   article h3 {
     font-size:  16pt;
-  }
-
-  article header .title{
-    font-size: 26px;
-    text-align: center;
-    
   }
 }
